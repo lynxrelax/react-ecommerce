@@ -2,8 +2,9 @@ import React from "react";
 import './sign-up.styles.scss' ;
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
-
-import {auth, createUserProfileDocument} from '../../firebase/firebase.utils'
+import {auth, createUserProfileDocument} from '../../firebase/firebase.utils';
+// import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 class SignUp extends React.Component{
     constructor(){
@@ -28,8 +29,14 @@ class SignUp extends React.Component{
         }
 
         try{
-            const { user} = await auth.createUserWithEmailAndPassword(email, password);
-            await createUserProfileDocument(user,{displayName});
+            // const { user} = await auth.createUserWithEmailAndPassword(auth, email, password);
+            // await createUserProfileDocument(user,{displayName});
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    // ...
+                })
 
             this.setState({
             displayName:'',
