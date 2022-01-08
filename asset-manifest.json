@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-ecommerce/static/css/main.588b9943.css",
+    "main.js": "/react-ecommerce/static/js/main.adfa49d8.js",
+    "service-worker.js": "/react-ecommerce/service-worker.js",
+    "static/media/shopping-bag.svg": "/react-ecommerce/static/media/shopping-bag.a688874f6f1507316bdfa420328a4a53.svg",
+    "static/media/crown.svg": "/react-ecommerce/static/media/crown.3a4e2b15908e7a4c25343677d232b7e6.svg",
+    "index.html": "/react-ecommerce/index.html",
+    "main.588b9943.css.map": "/react-ecommerce/static/css/main.588b9943.css.map",
+    "main.adfa49d8.js.map": "/react-ecommerce/static/js/main.adfa49d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.588b9943.css",
+    "static/js/main.adfa49d8.js"
+  ]
+}
