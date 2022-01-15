@@ -13,10 +13,10 @@ import { doc, onSnapshot, getFirestore } from "firebase/firestore";
 import {setCurrentUser} from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selector';
 import { createStructuredSelector } from 'reselect';
-
+import { selectCollectionsForPreview } from './redux/shop/shop.selectors'
 
 class App extends React.Component{
- 
+
   unsubscribeFromAuth = null
 
     componentDidMount() {
@@ -32,7 +32,7 @@ class App extends React.Component{
             });
         });
       }
-      setCurrentUser(userAuth)
+      setCurrentUser(userAuth);
     });
   }
   
@@ -60,7 +60,8 @@ class App extends React.Component{
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser:selectCurrentUser
+  currentUser:selectCurrentUser,
+  collectionsArray:selectCollectionsForPreview
 })
 
 
